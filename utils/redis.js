@@ -10,7 +10,7 @@ class RedisClient {
 	}
 
 	isAlive() {
-		return this.isClientConnected;
+		return this.client.connected;
 	}
 
 	async get(key) {
@@ -27,5 +27,5 @@ class RedisClient {
 	}
 }
 
-const redisClient = new RedisClient();
+export const redisClient = new RedisClient();
 export default redisClient;
